@@ -1,0 +1,9 @@
+install.packages("devtools")
+
+devtools::install_github(repo = "maksimhorowitz/nflscrapR")
+
+library(nflscrapR)
+
+pbp_2018 <- scrape_season_play_by_play(2018, "reg")
+
+write.csv(pbp_2018, "2018.csv")
